@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net6.0": {
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1522,7 +1522,7 @@
       },
       "MoneyTrack.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
+        "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
           "bin/placeholder/MoneyTrack.Domain.dll": {}
         },
@@ -5768,7 +5768,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    "net6.0": [
       "Microsoft.EntityFrameworkCore >= 5.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.6",
@@ -5776,8 +5776,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\default-user\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Artem.Langavyi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5785,26 +5784,24 @@
       "projectUniqueName": "C:\\Projects\\money-track\\src\\MoneyTrack.Data\\MoneyTrack.Data.csproj",
       "projectName": "MoneyTrack.Data",
       "projectPath": "C:\\Projects\\money-track\\src\\MoneyTrack.Data\\MoneyTrack.Data.csproj",
-      "packagesPath": "C:\\Users\\default-user\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Artem.Langavyi\\.nuget\\packages\\",
       "outputPath": "C:\\Projects\\money-track\\src\\MoneyTrack.Data\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\default-user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Artem.Langavyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://packages.poort80.nl/nuget/default": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {
             "C:\\Projects\\money-track\\src\\MoneyTrack.Domain\\MoneyTrack.Domain.csproj": {
               "projectPath": "C:\\Projects\\money-track\\src\\MoneyTrack.Domain\\MoneyTrack.Domain.csproj"
@@ -5819,8 +5816,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -5852,7 +5849,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
