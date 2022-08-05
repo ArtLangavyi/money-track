@@ -55,6 +55,6 @@ export const removeExpencePlaceRequest = (id:number) => async (dispatch:any) => 
     }
 }
 
-export const displayAlert = (text: string) => () => {
+export const displayAlert = (text: any) => () => {
     alert(text);
 };

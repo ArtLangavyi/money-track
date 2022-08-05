@@ -123,7 +123,7 @@ export class ApiClient implements IApiClient {
 
     constructor(baseUrl?: string, http?: { fetch(url: RequestInfo, init?: RequestInit): Promise<Response> }) {
         this.http = http ? http : <any>window;
-        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "http://localhost:2020";
+        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "http://host.docker.internal:2022";
     }
 
     /**
