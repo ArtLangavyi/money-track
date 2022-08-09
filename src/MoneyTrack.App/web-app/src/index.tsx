@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom/client";
 import './index.css';
 import App from './App';
 import { persistStore } from 'redux-persist';
@@ -10,14 +10,14 @@ import { configureStore } from './store';
 const store = configureStore();
 const persistor = persistStore(store);
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root") as any);
+root.render(
   <Provider store={store}>
       <PersistGate
           loading={<div>Loading...</div>}
           persistor={persistor}>
           <App />
       </PersistGate>
-  </Provider>,
-  document.getElementById('root'),
+  </Provider>
 );
 

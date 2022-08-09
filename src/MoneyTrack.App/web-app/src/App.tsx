@@ -13,6 +13,7 @@ const ExpencePlaceList = lazy(() => import("./components/Expence/Place/ExpencePl
 const OrderListList = lazy(() => import("./components/Orders/OrderList"));
 
 const App: React.FC = () => (
+  <Suspense fallback={<div>Loading...</div>}>
   <div>
     <Navigation />
     <Suspense fallback={<div>Loading...</div>}>
@@ -28,6 +29,7 @@ const App: React.FC = () => (
       </Router> 
     </Suspense>
   </div>
+  </Suspense>
 );
 
 export default App;
