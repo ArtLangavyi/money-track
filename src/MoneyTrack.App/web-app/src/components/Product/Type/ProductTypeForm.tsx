@@ -20,7 +20,7 @@ const ProductTypeForm = ({ productTypeList, onCreatePressed }: { productTypeList
                 onChange={e => setInputValue(e.target.value)}
                 required
                 />
-                <InputGroup.Append>
+                <InputGroup>
                 <Button variant="outline-secondary" type="submit" 
                 onClick={() => {
                     const isDuplicateText =
@@ -30,7 +30,7 @@ const ProductTypeForm = ({ productTypeList, onCreatePressed }: { productTypeList
                         setInputValue('');
                     }
                 }}>Save</Button>
-                </InputGroup.Append>
+                </InputGroup>
             </InputGroup>
         </div>
     );

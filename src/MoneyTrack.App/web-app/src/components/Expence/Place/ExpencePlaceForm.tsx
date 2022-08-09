@@ -20,7 +20,7 @@ const ExpencePlaceForm = ({ expencePlaceList, onCreatePressed }: { expencePlaceL
                 onChange={e => setInputValue(e.target.value)}
                 required
                 />
-                <InputGroup.Append>
+                <InputGroup>
                 <Button variant="outline-secondary" type="submit" 
                 onClick={() => {
                     const isDuplicateText =
@@ -30,7 +30,7 @@ const ExpencePlaceForm = ({ expencePlaceList, onCreatePressed }: { expencePlaceL
                         setInputValue('');
                     }
                 }}>Save</Button>
-                </InputGroup.Append>
+                </InputGroup>
             </InputGroup>
         </div>
     );

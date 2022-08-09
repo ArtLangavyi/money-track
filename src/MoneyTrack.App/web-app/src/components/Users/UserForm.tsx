@@ -24,7 +24,7 @@ const UserForm = ({ userList, onCreatePressed }: { userList:UserResponse[], onCr
                 onChange={e => setFormData({...formData, firstName: e.target.value})}
                 required
                 />
-                <InputGroup.Append>
+                <InputGroup>
                     <Form.Control
                     name="middleName" 
                     type="text"
@@ -34,8 +34,8 @@ const UserForm = ({ userList, onCreatePressed }: { userList:UserResponse[], onCr
                     onChange={e => setFormData({...formData, middleName: e.target.value})}
                     required
                     />
-                </InputGroup.Append>
-                <InputGroup.Append>
+                </InputGroup>
+                <InputGroup>
                     <Form.Control
                     name="lastName" 
                     type="text"
@@ -45,8 +45,8 @@ const UserForm = ({ userList, onCreatePressed }: { userList:UserResponse[], onCr
                     onChange={e => setFormData({...formData, lastName: e.target.value})}
                     required
                     />
-                </InputGroup.Append>
-                <InputGroup.Append>
+                </InputGroup>
+                <InputGroup>
                 <Button variant="outline-secondary" type="submit" 
                 onClick={() => {
                     const isDuplicateText =
@@ -56,7 +56,7 @@ const UserForm = ({ userList, onCreatePressed }: { userList:UserResponse[], onCr
                         setFormData({...formData, firstName: '', middleName: '', lastName: ''})
                     }
                 }}>Save</Button>
-                </InputGroup.Append>
+                </InputGroup>
             </InputGroup>
         </div>
     );

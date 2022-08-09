@@ -8,11 +8,11 @@ const OrderItem = ({ order, eventKey, onRemovePressed }:{ order: OrderResponse, 
     
     return (   
         <Card>
-            <Accordion.Toggle as={Card.Header} eventKey={eventKey}>
+            <Accordion as={Card.Header} eventKey={eventKey}>
             <Card.Title>{order.id}</Card.Title>
             <Card.Subtitle >{JSON.stringify(order)}</Card.Subtitle>
                 &nbsp;<Button variant="outline-danger" size="sm" onClick={() => onRemovePressed(order.id)} className="remove-button">Remove</Button>
-            </Accordion.Toggle>
+            </Accordion>
 
             <Accordion.Collapse eventKey={eventKey}>
                 <Card.Body>

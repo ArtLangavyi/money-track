@@ -7,7 +7,7 @@ class Navigation extends Component {
       return (
         <Navbar collapseOnSelect sticky='top' expand='sm' bg='light' variant='light'>
             <Container>
-                <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+                <Navbar aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav.Link href='/'>Home</Nav.Link>
                     <Nav.Link href='/product-types'>Product types</Nav.Link>

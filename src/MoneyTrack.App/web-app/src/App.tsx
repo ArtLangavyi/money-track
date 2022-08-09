@@ -1,35 +1,34 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { Container } from 'react-bootstrap';
 import './App.css';
-import Home from './components/Home';
-import Navigation from './components/Navigation';
-import ProductTypeList from './components/Product/Type/ProductTypeList';
-import ProductList from './components/Product/ProductList';
-import UserList from './components/Users/UserList';
-import ExpencePlaceList from './components/Expence/Place/ExpencePlaceList';
-import OrderListList from './components/Orders/OrderList';
 
-function App() {
+const Home = lazy(() => import("./components/Home"));
+const Navigation = lazy(() => import("./components/Navigation"));
+const ProductTypeList = lazy(() => import("./components/Product/Type/ProductTypeList"));
+const ProductList = lazy(() => import("./components/Product/ProductList"));
+const UserList = lazy(() => import("./components/Users/UserList"));
+const ExpencePlaceList = lazy(() => import("./components/Expence/Place/ExpencePlaceList"));
+const OrderListList = lazy(() => import("./components/Orders/OrderList"));
 
-
-  return (
-   <div>
-      <Navigation />
-
+const App: React.FC = () => (
+  <div>
+    <Navigation />
+    <Suspense fallback={<div>Loading...</div>}>
       <Router>
-        <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/product-types' component={ProductTypeList} />
-              <Route path='/products' component={ProductList} />
-              <Route path='/users' component={UserList} />
-              <Route path='/expence-places' component={ExpencePlaceList} />
-              <Route path='/orders' component={OrderListList} />
-          </Switch>
+        <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/product-types' element={<ProductTypeList />} />
+              <Route path='/products' element={<ProductList />} />
+              <Route path='/users' element={<UserList />} />
+              <Route path='/expence-places' element={<ExpencePlaceList />} />
+              <Route path='/orders' element={<OrderListList />} />
+          </Routes>
       </Router> 
-   </div>
-  );
-}
+    </Suspense>
+  </div>
+);
 
 export default App;
+

@@ -16,7 +16,7 @@ const ProductList = ({  productList, isLoading, onRemovePressed }
     
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(loadProductList())
+        dispatch(loadProductList() as any)
     }, [dispatch]);
     
     const loadingMessage = <div> <Spinner

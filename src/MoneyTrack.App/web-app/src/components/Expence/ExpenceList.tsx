@@ -16,8 +16,7 @@ const ExpenceList = ({ orderId, expenceList, isLoading, onRemovePressed }
      const dispatch = useDispatch();
         
     useEffect(() => {
-    
-        dispatch(loadExpenceList(orderId))
+        dispatch(loadExpenceList(orderId) as any)
     }, [orderId, dispatch]);
     
     const loadingMessage = <div> <Spinner

@@ -16,7 +16,7 @@ const ExpencePlaceList = ({  expencePlaceList, isLoading, onRemovePressed }
     
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(loadExpencePlaceList());
+        dispatch(loadExpencePlaceList() as any);
     }, [dispatch]);
     
     const loadingMessage = <div> <Spinner

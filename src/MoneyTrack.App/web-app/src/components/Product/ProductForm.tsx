@@ -21,7 +21,7 @@ const ProductForm = ({ productList, productTypeList, onCreatePressed, isLoadingP
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(loadProductTypeList());
+        dispatch(loadProductTypeList() as any);
     }, [dispatch]);
     
 
@@ -38,7 +38,7 @@ const ProductForm = ({ productList, productTypeList, onCreatePressed, isLoadingP
                 onChange={e => setFormData({...formData, name: e.target.value})}
                 required
                 />
-                <InputGroup.Append className="mb-3">
+                <InputGroup className="mb-3">
                     <Dropdown>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                             {selectedProductType.name as string}
@@ -50,8 +50,8 @@ const ProductForm = ({ productList, productTypeList, onCreatePressed, isLoadingP
                             </Dropdown.Item>)}
                         </Dropdown.Menu>
                     </Dropdown>
-                </InputGroup.Append>
-                <InputGroup.Append>
+                </InputGroup>
+                <InputGroup>
                 {
                 isLoadingProductTypes ?
                     <Button variant="outline-secondary" disabled>
@@ -76,7 +76,7 @@ const ProductForm = ({ productList, productTypeList, onCreatePressed, isLoadingP
                         }
                     }}>Save</Button>
                 }
-                </InputGroup.Append>
+                </InputGroup>
             </InputGroup>
         </div>
     );

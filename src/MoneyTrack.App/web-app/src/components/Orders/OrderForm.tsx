@@ -31,8 +31,8 @@ const OrderForm = ({ expencePlaceList, userList, onCreatePressed, isLoadingExpen
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(loadExpencePlaceList());
-        dispatch(loadUserList());
+        dispatch(loadExpencePlaceList() as any);
+        dispatch(loadUserList() as any);
     }, [dispatch]);
     
 
@@ -49,7 +49,7 @@ const OrderForm = ({ expencePlaceList, userList, onCreatePressed, isLoadingExpen
                 onChange={e => setFormData({...formData, total: Number(e.target.value)})}
                 required
                 />
-                <InputGroup.Append className="mb-3">
+                <InputGroup className="mb-3">
                     <Form.Control
                         name="name" 
                         type="text"
@@ -60,8 +60,8 @@ const OrderForm = ({ expencePlaceList, userList, onCreatePressed, isLoadingExpen
                         onChange={e => setFormData({...formData, totalDiscount: Number(e.target.value)})}
                         required
                         />
-                </InputGroup.Append>
-                <InputGroup.Append className="mb-3">
+                </InputGroup>
+                <InputGroup className="mb-3">
                     <Dropdown>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                             {selectedExpencePlace.name as string}
@@ -73,8 +73,8 @@ const OrderForm = ({ expencePlaceList, userList, onCreatePressed, isLoadingExpen
                             </Dropdown.Item>)}
                         </Dropdown.Menu>
                     </Dropdown>
-                </InputGroup.Append>
-                <InputGroup.Append className="mb-3">
+                </InputGroup>
+                <InputGroup className="mb-3">
                     <Dropdown>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                             {selectedUser.name as string}
@@ -86,8 +86,8 @@ const OrderForm = ({ expencePlaceList, userList, onCreatePressed, isLoadingExpen
                             </Dropdown.Item>)}
                         </Dropdown.Menu>
                     </Dropdown>
-                </InputGroup.Append>
-                <InputGroup.Append>
+                </InputGroup>
+                <InputGroup>
                 {
                 (isLoadingExpencePlaces || isLoadingUsers) ?
                     <Button variant="outline-secondary" disabled>
@@ -111,7 +111,7 @@ const OrderForm = ({ expencePlaceList, userList, onCreatePressed, isLoadingExpen
                         }                        
                     }}>Save</Button>
                 }
-                </InputGroup.Append>
+                </InputGroup>
             </InputGroup>
         </div>
     );

@@ -16,7 +16,7 @@ const UserList = ({  userList, isLoading, onRemovePressed }
     
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(loadUserList());
+        dispatch(loadUserList() as any);
     }, [dispatch]);
     
     const loadingMessage = <div> <Spinner

@@ -21,7 +21,7 @@ const ExpenceForm = ({ orderId, productList, onCreatePressed, isLoadingProducts 
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(loadProductList());
+        dispatch(loadProductList() as any);
     }, []);
     
 
@@ -38,7 +38,7 @@ const ExpenceForm = ({ orderId, productList, onCreatePressed, isLoadingProducts 
                 onChange={e => setFormData({...formData, price: Number(e.target.value)})}
                 required
                 />
-                <InputGroup.Append className="mb-3">
+                <InputGroup className="mb-3">
                     <Form.Control
                         name="name" 
                         type="text"
@@ -49,8 +49,8 @@ const ExpenceForm = ({ orderId, productList, onCreatePressed, isLoadingProducts 
                         onChange={e => setFormData({...formData, qantity: Number(e.target.value)})}
                         required
                         />
-                </InputGroup.Append>
-                <InputGroup.Append className="mb-3">
+                </InputGroup>
+                <InputGroup className="mb-3">
                     <Form.Control
                         name="name" 
                         type="text"
@@ -61,8 +61,8 @@ const ExpenceForm = ({ orderId, productList, onCreatePressed, isLoadingProducts 
                         onChange={e => setFormData({...formData, amount: Number(e.target.value)})}
                         required
                         />
-                </InputGroup.Append>
-                <InputGroup.Append className="mb-3">
+                </InputGroup>
+                <InputGroup className="mb-3">
                     <Form.Control
                         name="name" 
                         type="text"
@@ -73,8 +73,8 @@ const ExpenceForm = ({ orderId, productList, onCreatePressed, isLoadingProducts 
                         onChange={e => setFormData({...formData, discount: Number(e.target.value)})}
                         required
                         />
-                </InputGroup.Append>
-                <InputGroup.Append className="mb-3">
+                </InputGroup>
+                <InputGroup className="mb-3">
                     <Dropdown>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                             {selectedProduct.name as string}
@@ -86,9 +86,9 @@ const ExpenceForm = ({ orderId, productList, onCreatePressed, isLoadingProducts 
                             </Dropdown.Item>)}
                         </Dropdown.Menu>
                     </Dropdown>
-                </InputGroup.Append>
+                </InputGroup>
                 
-                <InputGroup.Append>
+                <InputGroup>
                 {
                 (isLoadingProducts) ?
                     <Button variant="outline-secondary" disabled>
@@ -112,7 +112,7 @@ const ExpenceForm = ({ orderId, productList, onCreatePressed, isLoadingProducts 
                         }                        
                     }}>Save</Button>
                 }
-                </InputGroup.Append>
+                </InputGroup>
             </InputGroup>
         </div>
     );
