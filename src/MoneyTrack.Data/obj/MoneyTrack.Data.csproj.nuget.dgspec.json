@@ -21,9 +21,7 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://packages.poort80.nl/nuget/default": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Git\\pathe-internal-api-gateway\\src\\Pathe.Clients.InternalApiGateway\\bin\\Debug": {}
         },
         "frameworks": {
           "net6.0": {
@@ -96,9 +94,7 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://packages.poort80.nl/nuget/default": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Git\\pathe-internal-api-gateway\\src\\Pathe.Clients.InternalApiGateway\\bin\\Debug": {}
         },
         "frameworks": {
           "net6.0": {

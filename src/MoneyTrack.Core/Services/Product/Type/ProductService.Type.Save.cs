@@ -21,13 +21,13 @@ namespace MoneyTrack.Core.Services
                 return BadRequest(result);
 
             var entities = await _context.ProductType.Where(x => x.Id == id).ToListAsync();
-            
+
             if (entities.Count > 1)
                 return BadRequest(result);
 
             var entity = entities.SingleOrDefault();
 
-            if(entity == null)
+            if (entity == null)
             {
                 result.StatusCode = HttpStatusCode.OK;
 

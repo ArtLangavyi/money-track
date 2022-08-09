@@ -48,7 +48,7 @@ namespace MoneyTrack.Core.Services
         private async Task<bool> CanBeDeleted(int id)
         {
             var result = await _context.Order.Include(o => o.User).AnyAsync(e => e.UserId == id);
-            
+
             if (!result)
                 result = await _context.Income.Include(o => o.User).AnyAsync(e => e.UserId == id);
 

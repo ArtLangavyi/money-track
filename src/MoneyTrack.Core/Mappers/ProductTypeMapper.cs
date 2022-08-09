@@ -25,6 +25,6 @@ namespace MoneyTrack.Core.Mappers
                 Name = model.Name
             };
         }
-        
+
     }
 }

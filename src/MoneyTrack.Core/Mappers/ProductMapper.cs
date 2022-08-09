@@ -30,6 +30,6 @@ namespace MoneyTrack.Core.Mappers
                 LastName = model.LastName
             };
         }
-        
+
     }
 }

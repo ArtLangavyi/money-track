@@ -6,14 +6,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MoneyTrack.Domain.Models
 {
-    public class Order : ITimeTracked 
+    public class Order : ITimeTracked
     {
         [Key]
         public int Id { get; set; }
-        
+
         [Required]
         public ExpencePlace ExpencePlace { get; set; }
-        
+
         [ForeignKey("ExpencePlace")]
         public int ExpencePlaceId { get; set; }
 
@@ -29,7 +29,7 @@ namespace MoneyTrack.Domain.Models
 
         [Required]
         public DateTime PaymentDate { get; set; }
-        
+
         [Required]
         public bool IsAutomatedPayment { get; set; }
 

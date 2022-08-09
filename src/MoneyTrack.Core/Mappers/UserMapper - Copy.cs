@@ -27,6 +27,6 @@ namespace MoneyTrack.Core.Mappers
                 ProductTypeId = model.ProductTypeId
             };
         }
-        
+
     }
 }

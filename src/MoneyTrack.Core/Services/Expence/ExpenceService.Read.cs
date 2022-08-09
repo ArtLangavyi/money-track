@@ -28,9 +28,9 @@ namespace MoneyTrack.Core.Services
             var result = new ServiceModelResult<List<ExpenceResponse>>();
 
             var entities = await _context.Expence
-                .Include(e=>e.Product)
-                .Include(e=>e.Order)
-                .Where(e=>e.OrderId == orderId).ToListAsync();
+                .Include(e => e.Product)
+                .Include(e => e.Order)
+                .Where(e => e.OrderId == orderId).ToListAsync();
 
             if (entities == null)
                 return NotFound(result);

@@ -22,7 +22,7 @@ namespace MoneyTrack.Domain.Models
 
         [Required]
         public double Price { get; set; }
-        
+
         [Required]
         public int Qantity { get; set; }
 

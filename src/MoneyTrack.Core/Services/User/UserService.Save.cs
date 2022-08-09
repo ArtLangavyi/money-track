@@ -45,7 +45,7 @@ namespace MoneyTrack.Core.Services
             try
             {
                 await _context.SaveChangesAsync();
-                
+
                 result.Model.Id = entity.Id;
                 result.Model.Saved = true;
             }

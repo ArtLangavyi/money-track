@@ -13,8 +13,8 @@ namespace MoneyTrack.Core.Services
         {
             var result = new ServiceModelResult<DeleteResponse>();
             result.Model = new DeleteResponse() { TypeName = nameof(Domain.Models.ProductType) };
-            
-            if(!(await ProdcytTypeCanBeDeleted(id)))
+
+            if (!(await ProdcytTypeCanBeDeleted(id)))
                 return BadRequest(result);
 
             var entity = await _context.ProductType.Where(x => x.Id == id).SingleOrDefaultAsync();

@@ -15,7 +15,7 @@ namespace MoneyTrack
     {
         const string ALLOW_DEVELOPMENT_CORS_ORIGINS_POLICY = "AllowDevelopmentSpecificOrigins";
         const string LOCAL_DEVELOPMENT_URL = "http://localhost:3000";
-         
+
         public IConfiguration Configuration { get; }
 
         private readonly List<string> _nonLocalEnv = new List<string> { "Test", "Acc", "Prod", "Scrum" };
@@ -41,9 +41,11 @@ namespace MoneyTrack
 
             services.AddControllers();
 
-            services.AddCors(options => {
+            services.AddCors(options =>
+            {
                 options.AddPolicy(name: ALLOW_DEVELOPMENT_CORS_ORIGINS_POLICY,
-                    builder => {
+                    builder =>
+                    {
                         builder.WithOrigins(LOCAL_DEVELOPMENT_URL)
                             .AllowAnyMethod()
                             .AllowAnyHeader()
@@ -60,7 +62,7 @@ namespace MoneyTrack
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IExpenceService, ExpenceService>();
             services.AddTransient<IUserService, UserService>();
-            services.AddTransient<IOrderService, OrderService>(); 
+            services.AddTransient<IOrderService, OrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

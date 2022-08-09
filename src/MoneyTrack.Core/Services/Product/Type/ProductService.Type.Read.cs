@@ -14,7 +14,7 @@ namespace MoneyTrack.Core.Services
             var result = new ServiceModelResult<ProductTypeResponse>();
 
             var entity = await _context.ProductType.Where(x => x.Id == id).SingleOrDefaultAsync();
-            
+
             if (entity == null)
                 return NotFound(result);
 
@@ -27,12 +27,12 @@ namespace MoneyTrack.Core.Services
         {
             var result = new ServiceModelResult<List<ProductTypeResponse>>();
 
-            var entities = await _context.ProductType.OrderBy(pt=>pt.Name).ToListAsync();
+            var entities = await _context.ProductType.OrderBy(pt => pt.Name).ToListAsync();
 
             if (entities == null)
                 return NotFound(result);
 
-            result.Model = entities.Select(entity=> entity.ToBaseModel()).ToList();
+            result.Model = entities.Select(entity => entity.ToBaseModel()).ToList();
 
             return result;
         }

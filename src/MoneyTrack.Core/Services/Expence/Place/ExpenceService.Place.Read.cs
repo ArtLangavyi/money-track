@@ -14,7 +14,7 @@ namespace MoneyTrack.Core.Services
             var result = new ServiceModelResult<ExpencePlaceResponse>();
 
             var entity = await _context.ExpencePlace.Where(x => x.Id == id).SingleOrDefaultAsync();
-            
+
             if (entity == null)
                 return NotFound(result);
 

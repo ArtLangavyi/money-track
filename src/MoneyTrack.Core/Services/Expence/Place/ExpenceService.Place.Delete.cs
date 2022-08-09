@@ -47,7 +47,7 @@ namespace MoneyTrack.Core.Services
 
         private async Task<bool> PlaceCanBeDeleted(int id)
         {
-            return !(await _context.Order.Include(e=>e.ExpencePlace).AnyAsync(e => e.ExpencePlace.Id == id));
+            return !(await _context.Order.Include(e => e.ExpencePlace).AnyAsync(e => e.ExpencePlace.Id == id));
         }
     }
 }

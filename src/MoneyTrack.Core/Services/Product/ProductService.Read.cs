@@ -14,7 +14,7 @@ namespace MoneyTrack.Core.Services
             var result = new ServiceModelResult<ProductResponse>();
 
             var entity = await _context.Product.Where(x => x.Id == id).SingleOrDefaultAsync();
-            
+
             if (entity == null)
                 return NotFound(result);
 
@@ -32,7 +32,7 @@ namespace MoneyTrack.Core.Services
             if (entities == null)
                 return NotFound(result);
 
-            result.Model = entities.Select(entity=>entity.ToBaseModel()).ToList();
+            result.Model = entities.Select(entity => entity.ToBaseModel()).ToList();
 
             return result;
         }
