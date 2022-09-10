@@ -8,6 +8,18 @@ import { addProductType } from './thunks';
 const ProductTypeForm = ({ productTypeList, onCreatePressed }: { productTypeList:ProductTypeResponse[], onCreatePressed:any }) => {
     const [inputValue, setInputValue] = useState('');
 
+function handleSubmit(inputValue: string){
+    if(inputValue !== '')
+    {
+        const isDuplicateText =
+        productTypeList.some(productType => productType.name === inputValue);
+        if (!isDuplicateText) {
+            onCreatePressed(inputValue);
+            setInputValue('');
+        }
+    }
+}
+
     return (
         <div>
             <InputGroup className="mb-3">
@@ -19,17 +31,17 @@ const ProductTypeForm = ({ productTypeList, onCreatePressed }: { productTypeList
                 aria-describedby="basic-addon2"
                 onChange={e => setInputValue(e.target.value)}
                 required
+                onKeyDownCapture={(e) => {
+                    if(e.code === 'Enter'){
+                        handleSubmit(inputValue);
+                    }
+                }}
                 />
                 <InputGroup>
-                <Button variant="outline-secondary" type="submit" 
-                onClick={() => {
-                    const isDuplicateText =
-                    productTypeList.some(productType => productType.name === inputValue);
-                    if (!isDuplicateText) {
-                        onCreatePressed(inputValue);
-                        setInputValue('');
-                    }
-                }}>Save</Button>
+                <Button 
+                variant="outline-secondary" 
+                type="submit" 
+                onClick={() => { handleSubmit(inputValue); }}>Save</Button>
                 </InputGroup>
             </InputGroup>
         </div>

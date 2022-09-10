@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  moneytrack:
+    image: ${DOCKER_REGISTRY-}moneytrack
+    ports:
+      - 2022:2022
+    build:
+      context: .
+      dockerfile: MoneyTrack/Dockerfile

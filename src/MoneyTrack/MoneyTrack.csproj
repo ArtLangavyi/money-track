@@ -4,6 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <NoWin32Manifest>true</NoWin32Manifest>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>c05f46df-173b-4607-8c1d-5a3831704f6d</UserSecretsId>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>

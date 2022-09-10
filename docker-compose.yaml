@@ -1,4 +1,4 @@
-﻿version: "3.8"
+﻿version: "3.4"
 
 services:
   sqlserver:
@@ -10,10 +10,16 @@ services:
     ports:
       - "1412:1433" 
       
-  money-track-service:
-      image: money-track-service
-      build:
-          context: ./src
-          dockerfile: ./MoneyTrack/Dockerfile
-      ports:
-        - 2022:2022
+#  money-track-service:
+#      image: ${DOCKER_REGISTRY-}money-track-service
+#      ports:
+#        - 2022:2022      
+#      networks:
+#        - mt-bridge-network
+#      build:
+#          context: .
+#          dockerfile: ./MoneyTrack/Dockerfile
+        
+networks:
+    mt-bridge-network:
+        external: true

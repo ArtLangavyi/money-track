@@ -9,7 +9,7 @@ class Navigation extends Component {
             <Container>
                 <Navbar aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse id='responsive-navbar-nav'>
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/'>Home</Nav.Link>                    
                     <Nav.Link href='/product-types'>Product types</Nav.Link>
                     <Nav.Link href='/products'>Products</Nav.Link>
                     <Nav.Link href='/users'>Users</Nav.Link>

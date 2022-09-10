@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrack", "MoneyTrack\MoneyTrack.csproj", "{C70B573F-627B-469D-A76E-18457B024AFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyTrack", "MoneyTrack\MoneyTrack.csproj", "{C70B573F-627B-469D-A76E-18457B024AFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrack.Data", "MoneyTrack.Data\MoneyTrack.Data.csproj", "{17DDA6B6-4B37-457E-BBFF-D004516D7FE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyTrack.Data", "MoneyTrack.Data\MoneyTrack.Data.csproj", "{17DDA6B6-4B37-457E-BBFF-D004516D7FE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrack.Core", "MoneyTrack.Core\MoneyTrack.Core.csproj", "{4B937693-F174-4DC1-9BD0-46B582CF2045}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyTrack.Core", "MoneyTrack.Core\MoneyTrack.Core.csproj", "{4B937693-F174-4DC1-9BD0-46B582CF2045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyTrack.Domain", "MoneyTrack.Domain\MoneyTrack.Domain.csproj", "{DCF67B70-D87E-4CF2-8511-8D00E30B43F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyTrack.Domain", "MoneyTrack.Domain\MoneyTrack.Domain.csproj", "{DCF67B70-D87E-4CF2-8511-8D00E30B43F9}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FC8DD977-F708-4F08-A692-0B678C50CE05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DCF67B70-D87E-4CF2-8511-8D00E30B43F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCF67B70-D87E-4CF2-8511-8D00E30B43F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCF67B70-D87E-4CF2-8511-8D00E30B43F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8DD977-F708-4F08-A692-0B678C50CE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8DD977-F708-4F08-A692-0B678C50CE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8DD977-F708-4F08-A692-0B678C50CE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8DD977-F708-4F08-A692-0B678C50CE05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

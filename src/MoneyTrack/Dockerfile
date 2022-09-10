@@ -1,16 +1,18 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 ENV TZ=Europe/Amsterdam
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
+EXPOSE 2022
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+RUN mkdir -p /opt/net5_startup
+RUN chmod -R 777 /opt/net5_startup
+
 WORKDIR /src
 COPY ["MoneyTrack/MoneyTrack.csproj", "MoneyTrack/"]
-COPY ["MoneyTrack.Domain/MoneyTrack.Domain.csproj", "MoneyTrack.Domain/"]
-COPY ["MoneyTrack.Core/MoneyTrack.Core.csproj", "MoneyTrack.Core/"]
-COPY ["MoneyTrack.Data/MoneyTrack.Data.csproj", "MoneyTrack.Data/"]
-RUN dotnet restore "MoneyTrack/MoneyTrack.csproj" -s https://api.nuget.org/v3/index.json
+
+RUN dotnet restore "MoneyTrack/MoneyTrack.csproj"
 COPY . .
 WORKDIR "/src/MoneyTrack"
 RUN dotnet build "MoneyTrack.csproj" -c Release -o /app/build
