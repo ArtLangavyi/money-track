@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../PopUp/popup.dart';
+
 class SettingsWidget extends StatelessWidget {
   final TextStyle optionStyle;
 
@@ -7,9 +9,10 @@ class SettingsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Index 3: Settings',
-      style: optionStyle,
+    return const Scaffold(
+      body: Center(
+        child: PopUpWidget(),
+      ),
     );
   }
 }
