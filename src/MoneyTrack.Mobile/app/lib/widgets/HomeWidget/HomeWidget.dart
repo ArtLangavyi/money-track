@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../piechart/PieChart.dart';
+
 class HomeWidget extends StatelessWidget {
   final TextStyle optionStyle;
 
@@ -7,9 +9,10 @@ class HomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Index 0: Home',
-      style: optionStyle,
+    return const Scaffold(
+      body: Center(
+        child: PieChartWidget(),
+      ),
     );
   }
 }
