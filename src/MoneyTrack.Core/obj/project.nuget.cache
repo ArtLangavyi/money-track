@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "woAgHCQEA+O7DAlqc2KIgSZenSEZpT+GXabsUnuo+hVhkonQ9d+m26DNuMJeWH8X3fDyzji2cA4DlW+GfL5F8g==",
+  "dgSpecHash": "5fNjLdp2jMLFbSByYdS1whabfIiEmS69jqvTp/mqNnUPb90vYREGbR8emsoJkaHHN7KAo+Bk7tacVBaWdOqDVw==",
   "success": true,
   "projectFilePath": "C:\\Projects\\money-track\\src\\MoneyTrack.Core\\MoneyTrack.Core.csproj",
   "expectedPackageFiles": [
@@ -125,5 +125,12 @@
     "C:\\Users\\Artem.Langavyi\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Artem.Langavyi\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://packages.poort80.nl/nuget/default'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

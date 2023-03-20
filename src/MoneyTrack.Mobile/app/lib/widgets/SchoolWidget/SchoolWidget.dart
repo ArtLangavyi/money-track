@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
+import '../CalendarPlanner/CalendarPlanner.dart';
+
 class SchoolWidget extends StatefulWidget {
   /// Creates the home page to display teh calendar widget.
   const SchoolWidget({Key? key}) : super(key: key);
@@ -13,16 +15,7 @@ class SchoolWidget extends StatefulWidget {
 class _SchoolWidgetState extends State<SchoolWidget> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfCalendar(
-      view: CalendarView.month,
-      dataSource: MeetingDataSource(_getDataSource()),
-      // by default the month appointment display mode set as Indicator, we can
-      // change the display mode as appointment using the appointment display
-      // mode property
-      monthViewSettings: const MonthViewSettings(
-          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-    ));
+    return const Scaffold(body: CalendarPlanner(title: 'Calendar Planner'));
   }
 
   List<Meeting> _getDataSource() {

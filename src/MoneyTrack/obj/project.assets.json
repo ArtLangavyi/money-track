@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -2322,7 +2322,7 @@
       },
       "MoneyTrack.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "MoneyTrack.Data": "1.0.0"
@@ -2336,7 +2336,7 @@
       },
       "MoneyTrack.Data/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
@@ -2351,7 +2351,7 @@
       },
       "MoneyTrack.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
           "bin/placeholder/MoneyTrack.Domain.dll": {}
         },
@@ -7253,7 +7253,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "Microsoft.AspNetCore.Mvc.Versioning >= 5.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.6",
@@ -7283,15 +7283,21 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
+        "C:\\Git\\pathe-internal-api-gateway\\src\\Pathe.Clients.InternalApiGateway\\bin\\Debug\\": {},
+        "C:\\Git\\pathe-public-api-gateway\\src\\Pathe.Clients.PublicApiGateway\\bin\\Debug\\": {},
+        "C:\\Git\\pathe-shared\\src\\Pathe.Shared\\bin\\Debug\\": {},
+        "C:\\Git\\pathe-subscription-service\\src\\Pathe.Clients.SubscriptionService\\bin\\Debug\\": {},
+        "C:\\Git\\pathe-user-service\\src\\Pathe.Clients.UserService\\bin\\Debug\\": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://packages.poort80.nl/nuget/default": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
             "C:\\Projects\\money-track\\src\\MoneyTrack.Core\\MoneyTrack.Core.csproj": {
               "projectPath": "C:\\Projects\\money-track\\src\\MoneyTrack.Core\\MoneyTrack.Core.csproj"
@@ -7312,8 +7318,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Versioning": {
             "target": "Package",
@@ -7365,8 +7371,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://packages.poort80.nl/nuget/default'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }
