@@ -19,7 +19,7 @@ class ApiClient {
   // ignore: non_constant_identifier_names
   final _RegMap = RegExp(r'^Map<String,(.*)>$');
 
-  ApiClient({this.basePath: "/"}) {
+  ApiClient({this.basePath = "/"}) {
     // Setup authentications (key: authentication name, value: authentication).
   }
 
