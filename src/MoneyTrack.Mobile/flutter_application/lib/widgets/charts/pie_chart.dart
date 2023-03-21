@@ -31,9 +31,8 @@ class PieChartWidgetState extends State<PieChartWidget> {
     };
 
     legendLabels = <String, String>{
-      "Used": "Spent ${widget.expenceCahrtViewModel.value}",
-      "Expected":
-          "Verwacht per maand: ${widget.expenceCahrtViewModel.expectedValue}",
+      "Used": "Expens",
+      "Expected": "Limit",
     };
 
     super.initState();
@@ -62,18 +61,18 @@ class PieChartWidgetState extends State<PieChartWidget> {
       dataMap: dataMap,
       animationDuration: const Duration(milliseconds: 800),
       chartLegendSpacing: 32,
-      chartRadius: math.min(MediaQuery.of(context).size.width / 3.2, 100),
+      chartRadius: math.min(MediaQuery.of(context).size.width / 3.2, 200),
       colorList: [
         Theme.of(context).primaryColor,
         const Color.fromARGB(100, 112, 125, 131),
       ],
       initialAngleInDegree: 0,
       chartType: ChartType.ring,
-      centerText: "${widget.expenceCahrtViewModel.value}",
+      centerText: "Current budget",
       legendLabels: legendLabels,
       legendOptions: const LegendOptions(
         showLegendsInRow: false,
-        legendPosition: LegendPosition.bottom,
+        legendPosition: LegendPosition.right,
         showLegends: true,
         legendShape: BoxShape.circle,
         legendTextStyle: TextStyle(
@@ -81,8 +80,8 @@ class PieChartWidgetState extends State<PieChartWidget> {
         ),
       ),
       chartValuesOptions: const ChartValuesOptions(
-        showChartValueBackground: false,
-        showChartValues: false,
+        showChartValueBackground: true,
+        showChartValues: true,
         showChartValuesInPercentage: false,
         showChartValuesOutside: false,
       ),
