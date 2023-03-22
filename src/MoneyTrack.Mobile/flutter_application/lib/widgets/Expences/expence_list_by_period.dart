@@ -24,9 +24,9 @@ class ExpenceListByPeriodView extends StatelessWidget {
       children: [
         const ListTile(
           leading: Icon(Icons.monetization_on_outlined),
-          title: Text('Expences for last month'),
+          title: Text('Last expences'),
           subtitle: Text('This is list of order for current month'),
-          trailing: Icon(Icons.shopping_bag),
+          trailing: Icon(Icons.add_shopping_cart_sharp),
         ),
         SizedBox(
             height: 188,
